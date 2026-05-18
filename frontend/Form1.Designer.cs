@@ -107,7 +107,7 @@
             btnAbout.FillColor = Color.FromArgb(31, 41, 55);
             btnAbout.Font = new Font("Segoe UI", 9.857143F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAbout.ForeColor = Color.White;
-            btnAbout.Location = new Point(23, 304);
+            btnAbout.Location = new Point(20, 347);
             btnAbout.Name = "btnAbout";
             btnAbout.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnAbout.Size = new Size(180, 45);
@@ -125,7 +125,7 @@
             btnRSA.FillColor = Color.FromArgb(31, 41, 55);
             btnRSA.Font = new Font("Segoe UI", 9.857143F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnRSA.ForeColor = Color.White;
-            btnRSA.Location = new Point(23, 234);
+            btnRSA.Location = new Point(20, 277);
             btnRSA.Name = "btnRSA";
             btnRSA.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnRSA.Size = new Size(180, 45);
@@ -143,7 +143,7 @@
             btnPlayFair.FillColor = Color.FromArgb(37, 99, 235);
             btnPlayFair.Font = new Font("Segoe UI", 9.857143F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnPlayFair.ForeColor = Color.White;
-            btnPlayFair.Location = new Point(23, 167);
+            btnPlayFair.Location = new Point(20, 210);
             btnPlayFair.Name = "btnPlayFair";
             btnPlayFair.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnPlayFair.Size = new Size(180, 45);
@@ -152,23 +152,25 @@
             // 
             // lblSubLogo
             // 
+            lblSubLogo.AutoSize = false;
             lblSubLogo.BackColor = Color.Transparent;
             lblSubLogo.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblSubLogo.ForeColor = Color.FromArgb(156, 163, 175);
-            lblSubLogo.Location = new Point(28, 62);
+            lblSubLogo.Location = new Point(0, 122);
             lblSubLogo.Name = "lblSubLogo";
-            lblSubLogo.Size = new Size(151, 32);
+            lblSubLogo.Size = new Size(197, 59);
             lblSubLogo.TabIndex = 2;
             lblSubLogo.Text = "PlayFair & RSA\n";
             // 
             // lblLogo
             // 
+            lblLogo.AutoSize = false;
             lblLogo.BackColor = Color.Transparent;
             lblLogo.Font = new Font("Segoe UI", 15.8571434F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblLogo.ForeColor = Color.White;
             lblLogo.Location = new Point(0, 12);
             lblLogo.Name = "lblLogo";
-            lblLogo.Size = new Size(203, 52);
+            lblLogo.Size = new Size(223, 81);
             lblLogo.TabIndex = 1;
             lblLogo.Text = " Crypto App";
             // 
@@ -235,7 +237,7 @@
             // FrmMain
             // 
             AutoScaleDimensions = new SizeF(13F, 31F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.None;
             BackColor = Color.FromArgb(243, 246, 251);
             ClientSize = new Size(1252, 786);
             Controls.Add(pnlMain);
@@ -247,7 +249,6 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = " Crypto Algorithm Application";
             gpnlSidebar.ResumeLayout(false);
-            gpnlSidebar.PerformLayout();
             pnlMain.ResumeLayout(false);
             pnlHeader.ResumeLayout(false);
             pnlHeader.PerformLayout();
