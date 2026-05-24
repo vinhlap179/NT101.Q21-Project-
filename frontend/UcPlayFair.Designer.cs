@@ -107,6 +107,7 @@
             btnPlayfairClear.Size = new Size(129, 49);
             btnPlayfairClear.TabIndex = 7;
             btnPlayfairClear.Text = "Clear";
+            btnPlayfairClear.Click += btnPlayfairClear_Click;
             // 
             // btnPlayfairDecrypt
             // 
@@ -125,6 +126,7 @@
             btnPlayfairDecrypt.Size = new Size(129, 49);
             btnPlayfairDecrypt.TabIndex = 6;
             btnPlayfairDecrypt.Text = "Decrypt";
+            btnPlayfairDecrypt.Click += btnPlayfairDecrypt_Click;
             // 
             // btnPlayfairEncrypt
             // 
@@ -143,6 +145,7 @@
             btnPlayfairEncrypt.Size = new Size(129, 49);
             btnPlayfairEncrypt.TabIndex = 5;
             btnPlayfairEncrypt.Text = "Encrypt";
+            btnPlayfairEncrypt.Click += btnPlayfairEncrypt_Click;
             // 
             // txtPlayfairInput
             // 
@@ -202,6 +205,7 @@
             txtPlayfairKey.ShadowDecoration.CustomizableEdges = customizableEdges10;
             txtPlayfairKey.Size = new Size(360, 45);
             txtPlayfairKey.TabIndex = 2;
+            txtPlayfairKey.TextChanged += txtPlayfairKey_TextChanged;
             // 
             // guna2HtmlLabel1
             // 
@@ -299,6 +303,7 @@
             guna2HtmlLabel4.Size = new Size(112, 44);
             guna2HtmlLabel4.TabIndex = 2;
             guna2HtmlLabel4.Text = "Result";
+            guna2HtmlLabel4.Click += guna2HtmlLabel4_Click;
             // 
             // dgvPlayfairMatrix
             // 
@@ -326,12 +331,13 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dgvPlayfairMatrix.DefaultCellStyle = dataGridViewCellStyle3;
             dgvPlayfairMatrix.GridColor = Color.FromArgb(231, 229, 255);
-            dgvPlayfairMatrix.Location = new Point(72, 94);
+            dgvPlayfairMatrix.Location = new Point(49, 55);
             dgvPlayfairMatrix.Name = "dgvPlayfairMatrix";
             dgvPlayfairMatrix.ReadOnly = true;
             dgvPlayfairMatrix.RowHeadersVisible = false;
             dgvPlayfairMatrix.RowHeadersWidth = 72;
-            dgvPlayfairMatrix.Size = new Size(300, 158);
+            dgvPlayfairMatrix.RowTemplate.Height = 37;
+            dgvPlayfairMatrix.Size = new Size(323, 197);
             dgvPlayfairMatrix.TabIndex = 1;
             dgvPlayfairMatrix.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dgvPlayfairMatrix.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -354,6 +360,7 @@
             dgvPlayfairMatrix.ThemeStyle.RowsStyle.Height = 37;
             dgvPlayfairMatrix.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dgvPlayfairMatrix.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dgvPlayfairMatrix.CellContentClick += dgvPlayfairMatrix_CellContentClick;
             // 
             // guna2HtmlLabel3
             // 
@@ -368,7 +375,6 @@
             // 
             // UcPlayFair
             // 
-            AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.None;
             BackColor = Color.FromArgb(243, 246, 251);
             Controls.Add(cardPlayfairOutput);
