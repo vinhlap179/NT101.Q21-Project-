@@ -141,7 +141,7 @@ namespace frontend
 
         private void btnPlayfairClear_Click(object sender, EventArgs e)
         {
-            if (txtPlayfairInput.Text != "" || txtPlayfairOutput.Text != "" || txtPlayfairKey.Text != "" )
+            if (txtPlayfairInput.Text != "" || txtPlayfairOutput.Text != "" || txtPlayfairKey.Text != "")
             {
                 txtPlayfairInput.Clear();
                 txtPlayfairKey.Clear();
@@ -169,6 +169,15 @@ namespace frontend
             }
 
             txtPlayfairOutput.Text = ProcessPlayfair(txtPlayfairInput.Text, txtPlayfairKey.Text, false);
+        }
+
+        private void btnPlayfairCopy_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(txtPlayfairOutput.Text))
+            {
+                Clipboard.SetText(txtPlayfairOutput.Text);
+                MessageBox.Show("Đã copy kết quả vào Clipboard!");
+            }
         }
     }
 }

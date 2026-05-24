@@ -63,8 +63,8 @@
             cardRSAKeyInput = new Guna.UI2.WinForms.Guna2Panel();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             btnGenerateRSAKey = new Guna.UI2.WinForms.Guna2Button();
-            guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            txtE = new Guna.UI2.WinForms.Guna2TextBox();
+            txtQ = new Guna.UI2.WinForms.Guna2TextBox();
             txtP = new Guna.UI2.WinForms.Guna2TextBox();
             cardRSAKeyOutput = new Guna.UI2.WinForms.Guna2Panel();
             guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -93,8 +93,8 @@
             cardRSAKeyInput.BorderRadius = 18;
             cardRSAKeyInput.Controls.Add(guna2HtmlLabel1);
             cardRSAKeyInput.Controls.Add(btnGenerateRSAKey);
-            cardRSAKeyInput.Controls.Add(guna2TextBox2);
-            cardRSAKeyInput.Controls.Add(guna2TextBox1);
+            cardRSAKeyInput.Controls.Add(txtE);
+            cardRSAKeyInput.Controls.Add(txtQ);
             cardRSAKeyInput.Controls.Add(txtP);
             cardRSAKeyInput.CustomizableEdges = customizableEdges9;
             cardRSAKeyInput.FillColor = Color.White;
@@ -133,46 +133,48 @@
             btnGenerateRSAKey.Size = new Size(300, 42);
             btnGenerateRSAKey.TabIndex = 3;
             btnGenerateRSAKey.Text = "Generate Key";
+            btnGenerateRSAKey.Click += btnGenerateRSAKey_Click;
             // 
-            // guna2TextBox2
+            // txtE
             // 
-            guna2TextBox2.CustomizableEdges = customizableEdges3;
-            guna2TextBox2.DefaultText = "";
-            guna2TextBox2.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox2.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox2.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox2.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Font = new Font("Segoe UI", 9F);
-            guna2TextBox2.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Location = new Point(25, 194);
-            guna2TextBox2.Margin = new Padding(5, 6, 5, 6);
-            guna2TextBox2.Name = "guna2TextBox2";
-            guna2TextBox2.PlaceholderText = "Public exponent e";
-            guna2TextBox2.SelectedText = "";
-            guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2TextBox2.Size = new Size(300, 42);
-            guna2TextBox2.TabIndex = 2;
+            txtE.CustomizableEdges = customizableEdges3;
+            txtE.DefaultText = "";
+            txtE.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtE.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtE.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtE.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtE.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtE.Font = new Font("Segoe UI", 9F);
+            txtE.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtE.Location = new Point(25, 194);
+            txtE.Margin = new Padding(5, 6, 5, 6);
+            txtE.Name = "txtE";
+            txtE.PlaceholderText = "Public exponent e";
+            txtE.ReadOnly = true;
+            txtE.SelectedText = "";
+            txtE.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            txtE.Size = new Size(300, 42);
+            txtE.TabIndex = 2;
             // 
-            // guna2TextBox1
+            // txtQ
             // 
-            guna2TextBox1.CustomizableEdges = customizableEdges5;
-            guna2TextBox1.DefaultText = "";
-            guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Font = new Font("Segoe UI", 9F);
-            guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new Point(25, 140);
-            guna2TextBox1.Margin = new Padding(5, 6, 5, 6);
-            guna2TextBox1.Name = "guna2TextBox1";
-            guna2TextBox1.PlaceholderText = "Prime number q\n";
-            guna2TextBox1.SelectedText = "";
-            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2TextBox1.Size = new Size(300, 42);
-            guna2TextBox1.TabIndex = 1;
+            txtQ.CustomizableEdges = customizableEdges5;
+            txtQ.DefaultText = "";
+            txtQ.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtQ.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtQ.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtQ.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtQ.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtQ.Font = new Font("Segoe UI", 9F);
+            txtQ.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtQ.Location = new Point(25, 140);
+            txtQ.Margin = new Padding(5, 6, 5, 6);
+            txtQ.Name = "txtQ";
+            txtQ.PlaceholderText = "Prime number q\n";
+            txtQ.SelectedText = "";
+            txtQ.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            txtQ.Size = new Size(300, 42);
+            txtQ.TabIndex = 1;
             // 
             // txtP
             // 
@@ -366,6 +368,7 @@
             btnRSACopy.Size = new Size(155, 55);
             btnRSACopy.TabIndex = 5;
             btnRSACopy.Text = "Copy Result";
+            btnRSACopy.Click += btnRSACopy_Click;
             // 
             // btnRSAClear
             // 
@@ -384,6 +387,7 @@
             btnRSAClear.Size = new Size(155, 55);
             btnRSAClear.TabIndex = 4;
             btnRSAClear.Text = "Clear";
+            btnRSAClear.Click += btnRSAClear_Click;
             // 
             // btnRSADecrypt
             // 
@@ -402,6 +406,7 @@
             btnRSADecrypt.Size = new Size(155, 55);
             btnRSADecrypt.TabIndex = 3;
             btnRSADecrypt.Text = "Decrypt";
+            btnRSADecrypt.Click += btnRSADecrypt_Click;
             // 
             // btnRSAEncrypt
             // 
@@ -420,6 +425,7 @@
             btnRSAEncrypt.Size = new Size(155, 55);
             btnRSAEncrypt.TabIndex = 2;
             btnRSAEncrypt.Text = "Encrypt";
+            btnRSAEncrypt.Click += btnRSAEncrypt_Click;
             // 
             // txtRSAOutput
             // 
@@ -468,7 +474,6 @@
             // 
             // UcRSA
             // 
-            AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.None;
             Controls.Add(cardRSAProcess);
             Controls.Add(cardRSAKeyOutput);
@@ -487,8 +492,8 @@
         private Guna.UI2.WinForms.Guna2TextBox txtP;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2Button btnGenerateRSAKey;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtE;
+        private Guna.UI2.WinForms.Guna2TextBox txtQ;
         private Guna.UI2.WinForms.Guna2Panel cardRSAKeyOutput;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;

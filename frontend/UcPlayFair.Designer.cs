@@ -266,6 +266,7 @@
             btnPlayfairCopy.Size = new Size(129, 49);
             btnPlayfairCopy.TabIndex = 4;
             btnPlayfairCopy.Text = "Copy Result";
+            btnPlayfairCopy.Click += btnPlayfairCopy_Click;
             // 
             // txtPlayfairOutput
             // 
